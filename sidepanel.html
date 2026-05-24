@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarks Cleaner</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Bookmarks Cleaner</h1>
+    </header>
+
+    <!-- Setup view: pick which folder to review -->
+    <section id="setup">
+      <label for="folderSelect">Folder to review</label>
+      <select id="folderSelect"></select>
+      <p id="setupCount" class="muted"></p>
+      <button id="startBtn" class="primary">Start review</button>
+
+      <hr class="divider" />
+
+      <p id="emptyCount" class="muted"></p>
+      <button id="cleanFoldersBtn" class="ghost">Delete empty folders</button>
+
+      <hr class="divider" />
+
+      <p id="statsLine" class="muted"></p>
+      <button id="resetBtn" class="ghost">Reset stats &amp; clear “later” list</button>
+    </section>
+
+    <!-- Review view: one bookmark at a time -->
+    <section id="review" hidden>
+      <p id="progress" class="muted"></p>
+
+      <div class="card">
+        <h2 id="bmTitle"></h2>
+
+        <div class="field">
+          <span class="label">Bookmarked URL</span>
+          <a id="bmUrl" class="url" target="_blank" rel="noreferrer"></a>
+        </div>
+
+        <div class="field">
+          <span class="label">Current tab URL</span>
+          <span id="currentUrl" class="url"></span>
+        </div>
+
+        <p id="navWarning" class="warning" hidden>
+          ⚠️ You navigated away from the bookmarked URL.
+        </p>
+
+        <div class="nav-actions" hidden id="navActions">
+          <button id="goBackBtn" class="ghost">Go back to bookmarked page</button>
+          <button id="updateBtn" class="ghost">Update bookmark to current page</button>
+        </div>
+      </div>
+
+      <div class="decision">
+        <button id="rejectBtn" class="danger">Reject (delete)</button>
+        <button id="keepBtn" class="primary">Keep</button>
+      </div>
+
+      <div class="secondary-actions">
+        <button id="skipBtn" class="ghost">Skip</button>
+        <button id="stopBtn" class="ghost">Stop review</button>
+      </div>
+    </section>
+
+    <!-- Done view -->
+    <section id="done" hidden>
+      <h2>All done 🎉</h2>
+      <p id="summary" class="muted"></p>
+      <button id="restartBtn" class="primary">Review again</button>
+    </section>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

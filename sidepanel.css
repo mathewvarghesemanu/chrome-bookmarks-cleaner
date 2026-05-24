@@ -1,0 +1,165 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f2328;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #2563eb;
+  --danger: #dc2626;
+  --warn-bg: #fef3c7;
+  --warn-fg: #92400e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  color: var(--fg);
+  background: var(--bg);
+  padding: 12px;
+}
+
+header h1 {
+  font-size: 16px;
+  margin: 0 0 12px;
+}
+
+h2 {
+  font-size: 15px;
+  margin: 0 0 8px;
+  word-break: break-word;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--fg);
+}
+
+button:hover {
+  filter: brightness(0.97);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}
+
+button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+button.danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--muted);
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px 0 12px;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+
+.field .label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.url {
+  word-break: break-all;
+  font-size: 13px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.warning {
+  background: var(--warn-bg);
+  color: var(--warn-fg);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+.nav-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.decision {
+  display: flex;
+  gap: 8px;
+}
+
+.decision button {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.secondary-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#startBtn,
+#restartBtn,
+#cleanFoldersBtn,
+#resetBtn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 16px 0 8px;
+}
