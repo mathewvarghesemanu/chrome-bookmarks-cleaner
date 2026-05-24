@@ -1,2 +1,14 @@
+# macOS
 .DS_Store
+
+# Build output
+dist/
+
+# Node
 node_modules/
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
